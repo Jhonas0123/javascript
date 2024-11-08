@@ -2,7 +2,7 @@
 
 Ejercicios con **html_css_javascript** para aprender 
 ---
-![imagen programacion](https://www.creativefabrica.com/wp-content/uploads/2023/04/03/Lofi-Anime-Girl-Programming-At-Computer-66116973-1.png)
+![imagen programacion](https://e1.pxfuel.com/desktop-wallpaper/686/551/desktop-wallpaper-a-anime-programming.jpg)
 
 > Nuestra mayor debilidad es rendirse; la única  manera de tener éxito es intentar siempre una  vez más”, Thomas A. Edison.
 

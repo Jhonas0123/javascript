@@ -1,0 +1,6 @@
+Se debe realizar una pagina que lleve como titulo (UNIVERSIDAD HTML)
+y que este separada por una linea, que tenga 3 link hacia (inicio,
+contacto y acerca de) estas mismas deben proporcionar informacion 
+de sus respectivas paginas
+
+Lo demas es a creatividad de uno mismo

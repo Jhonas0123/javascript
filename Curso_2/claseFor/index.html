@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+    </head>
+    <!-- 2 clases de formularios-->
+    <body>
+        <!-- <form action="">
+            <label for="nombre">
+                <span>Cual es tu nombre</span>
+                <input type="text" id="nombre" placeholder="tu nombre">
+            </label>
+            <label for="inicio-platzi">
+                <span>Cuando iniciaste en platzi</span>
+                <input type="date" id="inicio-platzi">
+            </label>
+            <label for="horario">
+                <span>En que horario estudias</span>
+                <input type="time" id="horario">
+            </label>
+        </form> -->
+        <form action="">
+            <label for="name">
+                <span>¿cual es tu nombre?</span>
+                <input type="text" name="nombre" id="nombre" autocomplete="name" required>
+            </label>
+            <label for="correo">
+                <span>¿cual es tu correo?</span>
+                <input type="email" name="correo" id="correo" autocomplete="correo" required>
+            </label>
+            <label for="pais">
+                <span>¿cual es tu pais?</span>
+                <input type="text" name="pais" id="pais" autocomplete="country" required>
+            </label>
+            <label for="cp">
+                <span>¿cual es tu codigo postal?</span>
+                <input type="text" name="cp" id="cp" autocomplete="postal-code" required>
+            </label>
+            <input type="submit">
+            
+        </form>
+    </body>
+</html>

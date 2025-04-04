@@ -1,0 +1,36 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.parent{
+    border: 2px black dotted;
+    
+}
+.box{
+    display: inline-block;
+}
+.box img{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 100%;
+    top: 150px;
+}
+.box h1{
+    position: relative;
+    left: 75%;
+    top: 200px;
+
+
+}
+.box p{
+    position: relative;
+    left: 40%;
+    bottom: 90px;
+}
+.box h3{
+    position: relative;
+    left: 104%;
+    top: 176px;
+}

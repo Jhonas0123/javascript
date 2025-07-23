@@ -1,0 +1,14 @@
+
+.titulo {
+    color: lightgreen;
+    width: 310px;
+    height: 50px;
+    background-color: rgb(46, 98, 177);
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

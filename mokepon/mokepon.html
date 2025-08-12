@@ -9,17 +9,28 @@
     <body>
         
         <section id="seleccionar-mascota">
-            <h1 class="titulo">MOKEPON!</h1>
+            <h1 class="titulo">Mokepon</h1>
 
-            <h2>elige a tu mascota:</h2>
+            <h2 class="subtitulo">elige a tu mascota:</h2>
 
-            <label for="hipodoge">hipodoge</label>
-            <input type="radio" name="mascota" id="hipodoge">
-            <label for="capipepo">capipepo</label>
-            <input type="radio" name="mascota" id="capipepo">
-            <label for="ratigueya">ratigueya</label>
-            <input type="radio" name="mascota" id="ratigueya">
+            <div class="tarjetas">
+                <label class="tarjeta-de-mokepon" for="hipodoge">
+                    <p>Hipodogue</p>
+                    <img src="assets/hipodogue.png" alt="Hipodogue">
+                </label>
+                <input type="radio" name="mascota" id="hipodoge">
+                <label class="tarjeta-de-mokepon" for="capipepo">
+                    <p>Capipepo</p>
+                    <img src="assets/capipepo.png" alt="Capipepo">
+                </label>
+                <input type="radio" name="mascota" id="capipepo">
+                <label class="tarjeta-de-mokepon" for="ratigueya">
+                    <p>Ratigueya</p>
+                    <img src="assets/ratigueya.png" alt="Ratigueya">
+                </label>
+                <input type="radio" name="mascota" id="ratigueya">
 
+            </div>
 
             <button id="boton-mascota">Seleccionar</button>
         </section>

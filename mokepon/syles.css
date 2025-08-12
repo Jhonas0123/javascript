@@ -1,14 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&family=Smooch+Sans:wght@100..900&display=swap');
 
-.titulo {
-    color: lightgreen;
-    width: 310px;
-    height: 50px;
-    background-color: rgb(46, 98, 177);
+body{
+    font-family: "Smooch Sans", sans-serif;
+    background-color: #154D71;
 }
+
 
 #seleccionar-mascota{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.titulo {
+    font-family: "Bitcount Grid Single", system-ui;
+    color: white;
+    font-size: 32px;
+}
+
+.subtitulo{
+    color: white;
+    font-size: 20px;
+
+}
+
+.tarjetas{
+    display: flex;
+    gap: 10px
+
+}
+
+.tarjeta-de-mokepon {
+    width: 180px;
+    height: 100px;
+    background: #1C6EA4;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.tarjeta-de-mokepon img {
+    width: 80px;
+}
+
+#boton-mascota {
+    font-family: "Smooch Sans", sans-serif;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    margin-top: 30px;
+}
+
+input {
+    display: none;
+
 }

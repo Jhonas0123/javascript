@@ -26,7 +26,7 @@ body{
 
 }
 
-.tarjetas{
+.tarjetas, .tarjetas-ataques{
     display: flex;
     gap: 10px
 
@@ -43,6 +43,9 @@ body{
     justify-content: center;
     align-items: center;
     color: white;
+
+
+
 }
 
 .tarjeta-de-mokepon img {
@@ -63,4 +66,83 @@ body{
 input {
     display: none;
 
+}
+
+/** darle estilos al boton a la hora de escoger estos pueden ser:
+:hover, :active, :checked**/
+input:hover + label{
+    background-color: #c30242;
+    transform: scale(1.10); /* se agranda un poco */
+    box-shadow: 0 10px 25px rgba(28, 110, 164, 0.6); /* sombra estética */
+
+}
+
+input:checked + label{
+    background-color: #E4004B;
+    transform: scale(1.10); /* se agranda un poco */
+    box-shadow: 0 10px 25px rgba(28, 110, 164, 0.6); /* sombra estética */
+
+}
+
+#seleccionar-ataque{
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-de-ataque {
+    background-color: #1C6EA4;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-color: transparent;
+    width: 100px;
+    color:white;
+    font-family: "Smooch Sans", sans-serif;
+
+}
+
+#mensajes{
+    width: 180px;
+    background-color: #FFF9AF;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar {
+    border: none;
+    color:#1C6EA4;
+    font-family: "Smooch Sans", sans-serif;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.ataques {
+    display: grid;
+    grid-template-columns:100px 100px;
+    color: white;
+    margin-top: 25px;
+}
+
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+@media (max-width: 360px){
+    .tarjetas, .tarjetas-ataques{
+        flex-direction: column;
+    }
 }

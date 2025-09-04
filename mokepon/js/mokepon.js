@@ -1,38 +1,104 @@
+const sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
+const sectionReiniciar = document.getElementById("reiniciar")
+const botonMascotaJugador = document.getElementById('boton-mascota')
+const botonFuego = document.getElementById('boton-fuego')
+const botonAgua = document.getElementById('boton-agua')
+const botonTierra = document.getElementById('boton-tierra')
+const botonReiniciar = document.getElementById('boton-reiniciar')
+
+const sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
+const inputhipodoge = document.getElementById('hipodoge')
+const inputcapipepo = document.getElementById('capipepo')
+const inputratigueya = document.getElementById('ratigueya')
+const spamMascotaJugador = document.getElementById('mascota-jugador')
+
+const spanMascotaEnemigo = document.getElementById("mascota-enemigo")
+
+const spanVidasJugador = document.getElementById("vidas-jugador")
+const spanVidasEnemigo = document.getElementById("vidas-enemigo")
+
+const sectionMensajes = document.getElementById('resultado')
+const ataqueDelJugador = document.getElementById('ataque-del-Jugador')
+const ataqueDelEnemigo = document.getElementById('ataque-del-enemigo')
+const contenedorTarjetas = document.getElementById("contenedorTarjetas")
+
+let mokepones = []
 let ataqueJugador
 let ataqueEnemigo
+let opcionDeMokepones
 let vidasJugador = 3
 let vidasEnemigo = 3
 
+class Mokepon {
+    constructor(nombre, foto, vida) {
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+        this.ataques = []
+    }
+}
+
+let hipodoge = new Mokepon("Hipodoge", "assets/hipodogue.png", 5)
+
+let capipepo = new Mokepon("Capipepo", "assets/capipepo.png", 5)
+
+let ratigueya = new Mokepon("Ratigueya", "assets/ratigueya.png", 5)
+
+hipodoge.ataques.push(
+    {nombre: '💧', id: 'boton-agua'},
+    {nombre: '💧', id: 'boton-agua'},
+    {nombre: '💧', id: 'boton-agua'},
+    {nombre: '🔥', id: 'boton-fuego'},
+    {nombre: '🌱', id: 'boton-tierra'},
+)
+
+capipepo.ataques.push(
+    {nombre: '🌱', id: 'boton-tierra'},
+    {nombre: '🌱', id: 'boton-tierra'},
+    {nombre: '🌱', id: 'boton-tierra'},
+    {nombre: '💧', id: 'boton-agua'},
+    {nombre: '🔥', id: 'boton-fuego'},
+    
+)
+
+ratigueya.ataques.push(
+    {nombre: '🔥', id: 'boton-fuego'},
+    {nombre: '🔥', id: 'boton-fuego'},
+    {nombre: '🔥', id: 'boton-fuego'},
+    {nombre: '💧', id: 'boton-agua'},
+    {nombre: '🌱', id: 'boton-tierra'},
+)
+
+mokepones.push(hipodoge, capipepo, ratigueya)
+
 function iniciarJuego(){
-    let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
+    
     sectionSeleccionarAtaque.style.display = "none"
 
-    let sectionReiniciar = document.getElementById("reiniciar")
-    sectionReiniciar.style.display = "none"
+    mokepones.forEach((mokepon) => {
+        opcionDeMokepones = `
+         <div class="tarjetas">
+                <input type="radio" name="mascota" id=${mokepon.nombre}>
+                <label class="tarjeta-de-mokepon" for=${mokepon.nombre}>
+                    <p>${mokepon.nombre}</p>
+                    <img src=${mokepon.foto} alt=${mokepon.nombre}>
+                </label>
+        `
+    contenedorTarjetas.innerHTML += opcionDeMokepones
+    })
 
-    let botonMascotaJugador = document.getElementById('boton-mascota')
+    sectionReiniciar.style.display = "none"
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
-    let botonFuego = document.getElementById('boton-fuego')
     botonFuego.addEventListener('click', ataqueFuego)
-    let botonAgua = document.getElementById('boton-agua')
     botonAgua.addEventListener('click', ataqueAgua)
-    let botonTierra = document.getElementById('boton-tierra')
     botonTierra.addEventListener('click', ataqueTierra)
-    let botonReiniciar = document.getElementById('boton-reiniciar')
     botonReiniciar.addEventListener('click', reiniciarJuego)
 
 }
 function seleccionarMascotaJugador(){
-    let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
+    
     sectionSeleccionarMascota.style.display = "none"
-
-    let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = "flex"
-
-    let inputhipodoge = document.getElementById('hipodoge')
-    let inputcapipepo = document.getElementById('capipepo')
-    let inputratigueya = document.getElementById('ratigueya')
-    let spamMascotaJugador = document.getElementById('mascota-jugador')
 
     if(inputhipodoge.checked) {
         spamMascotaJugador.innerHTML = 'hipodoge'
@@ -49,7 +115,6 @@ function seleccionarMascotaJugador(){
 
 function seleccionarMascotaEnemigo() {
     let mascotaAleatorio = aleatorio(1,3)
-    let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
     if(mascotaAleatorio == 1) {
         spanMascotaEnemigo.innerHTML = 'hipodoge'
@@ -90,8 +155,6 @@ function ataqueAleatorioEnemigo(){
 
 
 function combate(){
-    let spanVidasJugador = document.getElementById("vidas-jugador")
-    let spanVidasEnemigo = document.getElementById("vidas-enemigo")
 
     if(ataqueEnemigo == ataqueJugador){
         crearMensaje("empate")
@@ -125,9 +188,6 @@ function revisarVidas(){
     
 
 function crearMensaje(resultado){
-    let sectionMensajes = document.getElementById('resultado')
-    let ataqueDelJugador = document.getElementById('ataque-del-Jugador')
-    let ataqueDelEnemigo = document.getElementById('ataque-del-enemigo')
 
     let nuevoAtaqueDelJugador = document.createElement('p')
     let nuevoAtaqueDelEnemigo = document.createElement('p')
@@ -143,18 +203,13 @@ function crearMensaje(resultado){
 }
 
 function crearMensajeFinal(resultadoFinal){
-    let sectionMensajes = document.getElementById('resultado')
+    
     sectionMensajes.innerHTML = resultadoFinal
 
-
-    let botonFuego = document.getElementById('boton-fuego')
     botonFuego.disabled = true
-    let botonAgua = document.getElementById('boton-agua')
     botonAgua.disabled = true
-    let botonTierra = document.getElementById('boton-tierra')
     botonTierra.disabled = true
     // bloque encargado de ocultar el boton de reiniciar
-    let sectionReiniciar = document.getElementById("reiniciar")
     sectionReiniciar.style.display = "block"
 }
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>Imagenes</li>
+                <li>Formulario</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!-- controls añade botones a nuestro video -->
+            <!-- <video src="video_musica/WOS-FRESCO.mp4" 
+            controls 
+            width="600" 
+            height="400"></video> -->
+
+            <!-- preload se encarga de cargar el video antes de que se reprodusca -->
+            <video width="500" height="300" controls poster="imagenes/intro.png"
+            preload="metadata">
+                <source src="video_musica/WOS-FRESCO.mp4" type="video/mp4">
+                <source src="video_musica/09-01-2025.mov" type="video/mov">
+                Tu navegador no soporta formatos de video
+            </video>
+        </section>
+<!-- tanto para video como audio podemos usar source para que en caso que el navegador
+no sea compatible con una extencion este proceda y salte a la alternativa de 
+audio o video -->
+        <section>
+            <audio src=""></audio>
+
+            <audio controls preload="metadata">
+                <source src="video_musica/audio.mp3"
+                type="audio/mp3">
+                tu navegador no soporta audio html5
+            </audio>
+        </section>
+<!-- para jalar videos de youtube vamos al video -> compartir -> incorporar > copear todo el codigo -->
+        <section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uL9Qahg644E?si=gGAFN-TqCW8-mbzz&start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+    <footer>        
+    </footer>
+</body>
+</html>

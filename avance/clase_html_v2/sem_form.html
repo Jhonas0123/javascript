@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Mi sitio web</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Servicio</a>
+                </li>
+                <li>
+                    <a href="">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <ul>
+                    <li>pan</li>
+                    <li>leche</li>
+                    <li>vino</li>
+                </ul>
+                <ol start="4">
+                    <li>pan</li>
+                    <li>leche</li>
+                    <li>vino</li>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <form action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="Nombre" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="Nombre" required placeholder="usuario@ejemplo.com">
+                </div>
+
+                <div>
+                    <label for="tel">telefono:</label>
+                    <input id="telefono" type="telefono" name="telefono" title="ingresa ocho digitos" placeholder="87654321" pattern="[0-9]{9}">
+                </div>
+
+                <div>
+                    <label for="cantidad">Cantidad:</label>
+                    <input id="cantidad" type="number" name="cantidad" title="ingresa una cantidad" min="1" max="100" step="5" value="10">
+                </div>
+
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section>
+            <form action="#" method="post">
+                <div>
+                    <label for="password">Contraseña</label>
+                    <input id="password" type="password" name="password" placeholder="Minimo 8 caracteres" minlength="8">
+                </div>
+
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input id="edad" type="number" name="edad" min="18" max="30">
+                </div>
+
+                <div>
+                    <label for="fecha">Fecha:</label>
+                    <input id="fecha" type="date" name="fecha" min="2024-01-01" max="2024-12-12">
+                </div>
+
+                <div>
+                    <label for="color">Color:</label>
+                    <input id="color" type="color" name="color">
+                </div>
+
+                <fieldset>
+                    <legend>Genero:</legend>
+                    <input id="masculino" type="radio" name="genero" value="M">
+                    <label for="masculino">Masculino</label>
+
+                    <input id="femenino" type="radio" name="genero" value="F">
+                    <label for="femenino">Femenino</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <input type="checkbox" name="intereses" id="deportes" value="deportes">
+                    <label for="deportes" id="deportes"> Deportes</label>
+                    <input type="checkbox" name="intereses" id="musica" value="musica">
+                    <label for="musica" id="musica"> Musica</label>
+                </fieldset>
+
+                <div>
+                    <label for="pais">Pais</label>
+                    <select name="pais" id="pais">
+                        <option value="Mexico">Mexico</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Argentina">Argentina</option>
+                    </select>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <aside>
+        </aside>
+    </main>
+    <footer>
+        <p>
+            para ver la imagen de la semantica presiona 
+            <a href="imagenes/semantica.png">aqui</a>
+        </p>
+        <p>
+            copy: 2025 Mi sitio. todos los dedrechos reservados
+        </p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>Tablas</li>
+                <li>Formularios</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>
+                NOTA IMPORTANTE
+            </h2>
+            
+            <p>
+                Se recomienda que las imagenes para las paginas web pesen menos
+                de 200 KB a 250 KB esto por buenas practicas para que la pagina 
+                cargue de una manera mas rapida y eficiente para que puedan cargar 
+                sin dificultad, caso que pese mas hay paginas web y aplicaciones 
+                que se encargan de comprimir la misma
+                como ser:
+            </p>
+
+            <blockquote><strong><ul>
+                <li><a href="https://tinify.com/web">TINIFY</a></li><br>
+                <li><a href="https://squoosh.app/">SQUOOSH</a></li>
+            </ul></strong></blockquote>
+
+            <img src="imagenes/img_740x493_original.jpg" alt="imagen desempleados 2" width="200" height="200">
+
+            <figure>
+                <img src="imagenes/imagen_pequeña.jpg" alt="imagen sujeto jugando maincraft" width="200" height="200">
+                <figcaption>Jugador de maincraft</figcaption>
+            </figure>
+
+        </section>
+
+        <section>
+            <h2>IMAGENES RESPONSIVAS</h2>
+
+            <img src="imagenes/herramienta.png" alt="imagen bob esponja" srcset="
+            imagenes/herramienta.png 512w,
+            imagenes/esponja.jpg 720w,
+            imagenes/one.jpg 1200w"
+            sizes="(max-width: 600px) 100vw, 50vw">
+
+            <picture>
+                <source media="(min-width:768px)" srcset="imagenes/esponja.jpg">
+                <source media="(min-width:480px)" srcset="imagenes/hipodogue.png">
+                <img src="imagenes/herramienta.png" alt="herramienta icono">
+            </picture>
+        </section>
+    </main>
+
+
+</body>
+</html>

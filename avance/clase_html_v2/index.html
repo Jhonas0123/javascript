@@ -6,30 +6,78 @@
     <title>Vida</title>
 </head>
 <body>
-    <h1>
-        Pagina de prueba
-    </h1>
+    <header>
+        <h3>Rediccion a otros sitios desde la misma pagina</h3>
+        <a href="help_img.html">help_img</a></body><br>
+        <a href="sem_form.html">semantica</a></br>
+        <a href="tablas.html">tablas</a></br>
+        <a href="vimu.html">video</a></br>
+        <a href="posicionamiento_web_ej.html">posicionamiento_web (base hay que ver cada punto)</a>
+        <a href="portafolio.html">portafolio de ejemplo (revisar y adaptarlo a propio)</a>
+    </header>
+    <main>
+        <section>
+            <p>
+                Este es una prueba para la creacion de paginas <strong>web</strong>
+                recordando todo desde cero, por que no conseguimos trabajo aun <strong>F</strong>
+            </p>
 
-    <p>
-        Este es una prueba para la creacion de paginas <strong>web</strong>
-        recordando todo desde cero, por que no conseguimos trabajo aun <strong>F</strong>
-    </p>
+            <blockquote><strong>"dijeron que era la carrera con mayor trabajo F"</strong></blockquote>
 
-    <blockquote><strong>"dijeron que era la carrera con mayor trabajo F"</strong></blockquote>
+        
+            <p>
+                para este caso usamos para enviar un email
+            </p>
+            <a href="mailto:info@ejemplo.com?subject=Consultabody=Hola">Enviar email</a>
 
-    <h3>Rediccion a otros sitios desde la misma pagina</h3>
-    <a href="help_img.html">help_img</a></body><br>
-    <a href="sem_form.html">semantica</a></br>
-    <a href="tablas.html">tablas</a></br>
-    <a href="vimu.html">video</a></br>
-    
-    <p>
-        para este caso usamos para enviar un email
-    </p>
-    <a href="mailto:info@ejemplo.com?subject=Consultabody=Hola">Enviar email</a>
+            <h3>Redireccion pero con nueva pestaña</h3>
+            <a href="help_img.html" target="_blank"><img src="imagenes/imagen.png" alt="imagen desempleados 2" width="50" height="50"></a>
 
-    <h3>Redireccion pero con nueva pestaña</h3>
-    <a href="help_img.html" target="_blank"><img src="imagenes/imagen.png" alt="imagen desempleados 2" width="50" height="50"></a>
+        </section>
+
+        <section>
+            <h3>Accecibilidad</h3>
+            <p>
+                Para la parte de accesibilidad usamos lo que son etiquetas como ser atributos
+                ARIA, por ejemplo que a un boton con (X) cuando se le pase ctrl este reconozca que el boton
+                por el que paso el cursos tiene como nombre Cerrar ventana  
+            </p>
+            <button aria-label="Cerrar ventana">X</button>
+            <p>
+                para la parte de un buscador usamos un ARIA con nombre de buscador y describimos
+            </p>
+            <input type="search" aria-label="Buscador de productos">
+            <p>
+                campo de instrucciones, es un poco distinto al que se mostro pero
+                cumple en este caso las instrucciones las llamamos desde small y este
+                lo dira desde el reproductor
+            </p>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" aria-describedby="password-help">
+            <small id=""password-help>Minimo 8 caracteres, incluya numero y letras</small>
+
+            <p>
+                para la etiqueta de imagen 
+            </p>
+            <img src="grafica" alt="imagen de grafica" aria-describedby="grafica-descripcion">
+            <p id="grafica-description">Las ventas aumentaron un 40% en el Q1</p>
+
+            <p>
+                Para la parte de  region principal
+            </p>
+            <div role="main">
+                <h3>Contenido principal de la seccion</h3>
+                <p>aqui va el contenido mas importante de esta seccion</p>
+            </div>
+            <p>
+                Alertas importantes
+            </p>
+            <div role="alert">
+                tu seccion expirara en 5 minutos
+            </div>
+        </section>
+    </main>
+   
 
     <h4>para comentar en html es CRTL + K + C</h4>
 </body>

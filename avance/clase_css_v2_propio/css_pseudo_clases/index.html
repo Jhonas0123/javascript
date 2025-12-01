@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <h1>Pseudo clases y elementos</h1>
+        <nav>
+            <p>
+                para generar estilos a un elemento dentro de una etiqueta pero que no altere
+                a los demas, como ser el primero y el ultimo
+            </p>
+            <ul>
+                <li>primer item</li>
+                <li>segundo item</li>
+                <li>tercer item</li>
+                <li>cuarto item</li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <p>
+            dentro de css usaremos lo que es focus para cambiar la interaccion a la hora de 
+            hacer click dentro del input
+        </p>
+        <button>enviar</button>
+        <input type="text" placeholder="Click me">
+
+        <p>
+            ahora para alterar elementes dentro de una tabla
+        </p>
+        <table>
+            <tr>
+            <td>Fila 1</td>
+            </tr>
+            <tr>
+            <td>Fila 2</td>
+            </tr>
+            <tr>
+            <td>Fila 3</td>
+            </tr>
+            <tr>
+            <td>Fila 4</td>
+            </tr>
+        </table>
+
+        <!-- PSEUDO-ELEMENTOS -->
+        <h2>Pseudo-elementos</h2>
+        <p>
+            ahora manipulamos dentro de css el contenido de html, por ejemplo
+            creamos comillas dentro de css a html
+        </p>
+        <!-- ::before y ::after -->
+        <p class="quote">Texto con comillas</p>
+
+        <!-- ::first-letter -->
+        <p class="drop-cap">Lorem ipsum dolor sit amet consectetur.</p>
+
+        <!-- ::first-line -->
+        <p class="highlight-first">Primera línea destacada. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </main>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

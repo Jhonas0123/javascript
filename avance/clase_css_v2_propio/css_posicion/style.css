@@ -1,0 +1,6 @@
+.contenedor,
+.contenedor-padre,
+.contenedor-scroll,
+.contenedor-zindex {
+    border: 2px solid black;
+}

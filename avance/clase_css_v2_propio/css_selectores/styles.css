@@ -1,0 +1,29 @@
+.rojo {
+    color: red;
+}
+
+.azul {
+    border: 2px solid blue;
+}
+
+.azul p {
+    color: chocolate;
+}
+
+#verde {
+    background-color: rgb(207, 239, 177);
+    color: green;
+}
+
+button:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+a:link{
+    color: green;
+}
+
+a:visited{
+    color: yellow;
+}

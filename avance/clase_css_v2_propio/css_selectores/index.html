@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <h1>selectores y especifidad</h1>
+        <nav>
+            <ul>
+                <li>inicio</li>
+                <li>inicio_1</li>
+                <li>inicio_2</li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <h4>
+            existe la posibilidad de dar estilo de manera generica a
+            las etiquetas pero no es buena practica y para esto existe
+            2 tipos: por (clases) y por (ID)
+        </h4>
+        <p class="rojo">
+            para (CLASE), nota para hacer llamado es con punto (.) y luego
+            el nombre de la clase
+        </p>
+        <p id="verde">
+            para (ID), nota para hacer llamado es con numeral (#) y el nombre
+            del ID
+
+        </p>
+        <p>La diferencia entre estos dos es que la (clase) se puede
+            replicar en cualquier etiqueta pero el (id) es unico.
+            Por que ocurre esto? esto pasa por que a la hora de trabajar
+            con javascript esto nos provocara problemas.
+        </p>
+        <p>--------------------------------------------</p>
+        <p>
+            para el uso de dentro de un div y componentes usamos clase y si
+            queremos editar dentro del div algun componente usamos de manera 
+            jerarquica el llamado primero con el nombre de la clase, luego usamos
+            el llamado de las etiquetas posteriores 
+        </p>
+        <div class="azul">
+            <p>
+                ejemplo 1
+            </p>
+            <p>
+                ejemplo 2
+            </p>
+        </div>
+        <h3>
+            cambios de estado
+        </h3>
+        <p>
+            estos son aplicados a etiquedas que tengan como funcion
+            realizar un cambio de estado, ejemplo cuando pasamos el cursor
+            por un boton o link esperando que este cambie o haga algo
+        </p>
+        <button>Enter</button>
+        <p>
+            en el tipo de botton usaremos lo que es como link, cuando no se
+            visita o es primera vez que se presiona un boton usamos link pero
+            si queremos que se nos marque que este se visito usamos visited
+        </p>
+        <a href="www.youtube.com">youtube</a>
+
+        <h3>
+            puntos que da por importancia a los tipos segun class
+        </h3>
+
+        <p>
+            Elementos/etiquetas (h1, p, div): 1 punto.<br>
+            Clases (.rojo, .grande): 10 puntos.<br>
+            ID (#unico): 100 puntos.<br>
+            Estilos inline (...): 1000 puntos.<br>
+            importance (!important): sobrescribe casi cualquier regla tener cuidado.
+        </p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
